@@ -33,9 +33,14 @@
     lastName.value = '';
     commentBox.value = '';
     email.value = '';
-    if (!email.classList.contains('hide')) email.classList.add('hide');
+    if (!email.classList.contains('hide')) {
+      email.classList.add('hide');
+      email.tabIndex = -1;
+      email.ariaHidden = true;
+    }
     newsletterCheckbox.checked = false;
     submitBtn.disabled = true;
+    firstName.focus();
   }
 
   function submitUserInfo(){
@@ -63,6 +68,13 @@
 
   newsletterCheckbox.addEventListener("click", ()=>{
     email.classList.toggle('hide');
+    if (!newsletterCheckbox.checked){
+      email.tabIndex = -1;
+      email.ariaHidden = true;
+    } else {
+      email.tabIndex = 0;
+      email.ariaHidden = false;
+    }
   });
 
   [firstName, lastName].forEach(inputField => {
