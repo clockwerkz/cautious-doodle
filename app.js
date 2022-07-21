@@ -1,3 +1,4 @@
+console.log('[DEBUG]');
 const newsletterCheckbox = document.getElementById("newsletter");
 const email = document.getElementById("email");
 const submitBtn = document.querySelector("button");
