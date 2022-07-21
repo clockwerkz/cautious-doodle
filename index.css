@@ -18,3 +18,31 @@ body {
     display: flex;
     align-items: center;
   }
+
+  .toast {
+    position: absolute;
+    opacity: 0.0;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    background-color: #3b3b3b;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .show {
+    opacity: 1.0;
+    top: 30px;
+  }
+
+  .toast-text {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  .toast-error {
+    background-color: #a43737;
+  }
