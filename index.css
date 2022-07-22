@@ -5,13 +5,13 @@ body {
   .form-control {
     margin: 1.5rem 0;
   }
-  
-  .form-input {
-    transition: opacity 0.25s ease-out 0.2s;
+
+  .form-input--wrapper {
+    min-height: 21px;
   }
   
   .hide {
-    opacity: 0;
+    display: none;
   }
   
   .flex {
